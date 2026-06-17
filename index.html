@@ -41,6 +41,7 @@
   .checkbox-item input[type="checkbox"] { margin-top: 2px; width: 18px; height: 18px; accent-color: var(--gold); flex-shrink: 0; }
   .checkbox-item label { text-transform: none; letter-spacing: 0; font-size: 1rem; font-weight: 400; color: var(--ink-soft); line-height: 1.5; }
   .checkbox-stack { display: flex; flex-direction: column; gap: 0.75rem; }
+  .event-address { font-size: 0.78rem; color: var(--ink-muted); margin-top: 1px; }
   .submit-btn { width: 100%; padding: 1.1rem; background: var(--gold-dark); color: #FAF7F2; border: none; border-radius: var(--radius); font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; transition: background 0.2s, transform 0.1s; margin-top: 0.5rem; }
   .submit-btn:hover { background: var(--gold); }
   .submit-btn:active { transform: scale(0.99); }
@@ -64,12 +65,12 @@
     <div class="event-cell">
       <p class="event-label">Houppa</p>
       <p class="event-name">Synagogue Buffault</p>
-      <p class="event-info">14h00 · 28 rue Buffault, Paris 9e</p>
+      <p class="event-info">14h00 · 28 Rue Buffault, 75009 Paris</p>
     </div>
     <div class="event-cell">
       <p class="event-label">Réception</p>
       <p class="event-name">Pavillon Dauphine</p>
-      <p class="event-info">19h00 · Pl. du Mal. de Lattre de Tassigny, Paris 16e</p>
+      <p class="event-info">19h00 · Pl. du Mal. de Lattre de Tassigny, 75116 Paris</p>
     </div>
   </div>
   <form id="rsvp-form" novalidate>
@@ -83,7 +84,7 @@
     </div>
     <div class="field-group">
       <label>Téléphone</label>
-      <input type="tel" name="phone" placeholder="+33 6 00 00 00 00">
+      <input type="tel" name="phone" placeholder="06 00 00 00 00">
     </div>
     <div class="divider">Présence</div>
     <div class="field-group">
@@ -104,15 +105,24 @@
       <div class="checkbox-stack">
         <div class="checkbox-item">
           <input type="checkbox" id="ev-mairie">
-          <label for="ev-mairie">Cérémonie civile — Jeudi 5 novembre, Mairie</label>
+          <label for="ev-mairie">
+            Cérémonie civile — Jeudi 5 novembre, Mairie du 7e
+            <span class="event-address">(116 Rue de Grenelle, 75007 Paris)</span>
+          </label>
         </div>
         <div class="checkbox-item">
           <input type="checkbox" id="ev-houppa">
-          <label for="ev-houppa">Houppa — Mardi 10 novembre, 14h00, Synagogue Buffault</label>
+          <label for="ev-houppa">
+            Houppa — Mardi 10 novembre, 14h00
+            <span class="event-address">(28 Rue Buffault, 75009 Paris)</span>
+          </label>
         </div>
         <div class="checkbox-item">
           <input type="checkbox" id="ev-cocktail">
-          <label for="ev-cocktail">Cocktail & réception — 19h00, Pavillon Dauphine</label>
+          <label for="ev-cocktail">
+            Cocktail & réception — 19h00, Pavillon Dauphine
+            <span class="event-address">(Pl. du Mal. de Lattre de Tassigny, 75116 Paris)</span>
+          </label>
         </div>
       </div>
     </div>
